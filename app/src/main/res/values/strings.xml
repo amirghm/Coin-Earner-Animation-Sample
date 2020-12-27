@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Coin Earner</string>
+    <string name="app_x_coins">%s Coins</string>
+</resources>

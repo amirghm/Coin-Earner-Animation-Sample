@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/design_default_color_primary"
+        tools:context=".view.main.MainFragment">
+
+
+        <ImageView
+            android:id="@+id/getCoinButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:stateListAnimator="@animator/button_animator"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@drawable/circle_secondary_variant"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            android:padding="36dp"
+            app:srcCompat="@drawable/ic_coin" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:id="@+id/toolbarView"
+                android:layout_width="match_parent"
+                android:layout_height="?actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+
+                <TextView
+                    android:id="@+id/toolbarTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toStartOf="@+id/coinPanelRelativeLayout"
+                    android:text="@string/app_name"
+                    android:textColor="@color/design_default_color_on_primary"
+                    android:textSize="20sp" />
+
+                <RelativeLayout
+                    android:id="@+id/coinPanelRelativeLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:minHeight="40dp"
+                    android:paddingStart="12dp"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:layout_marginEnd="12dp"
+                    android:clickable="true"
+                    android:stateListAnimator="@animator/button_animator"
+                    android:focusable="true"
+                    android:paddingEnd="16dp"
+                    android:background="@drawable/btn_accent_enabled_4dp"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/coinImageView"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_coin"/>
+
+                    <TextView
+                        android:id="@+id/coinTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_toEndOf="@id/coinImageView"
+                        android:layout_centerVertical="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/design_default_color_on_secondary"
+                        android:textAllCaps="true"
+                        android:text="30 Coin" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:id="@+id/welcomeTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:gravity="center"
+            android:text="Welcome to Coin Earner app!\nYou can simply earn coins by pushing at the button"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.09" />
+
+        <TextView
+            android:id="@+id/hintTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:gravity="center"
+            android:text="Push button to earn Good Coins!"
+            android:textColor="@color/design_default_color_on_primary"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/getCoinButton"
+            app:layout_constraintVertical_bias="0.231" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
