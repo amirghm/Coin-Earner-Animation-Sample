@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Coin Earner</string>
-    <string name="app_x_coins">%s Coins</string>
+    <string name="coin_earner__x_coins">%s Coins</string>
+    <string name="coin_earner__welcome_message">Welcome to Coin Earner app!\nYou can simply earn coins by pushing at the button</string>
+    <string name="coin_earner__hint_message">Push button to earn Good Coins!</string>
+
+    <string name="cd__get_coin_button">Get Coin Button</string>
+    <string name="cd_coin">Coin</string>
 </resources>

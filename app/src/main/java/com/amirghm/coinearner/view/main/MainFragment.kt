@@ -86,7 +86,7 @@ class MainFragment : Fragment() {
      */
     private fun configureViewModel() {
         viewModel.coins.observe(viewLifecycleOwner, {
-            binding.coinTextView.text = getString(R.string.app_x_coins, it.toString())
+            binding.coinTextView.text = getString(R.string.coin_earner__x_coins, it.toString())
         })
 
         viewModel.randomCoinCountLiveData.observe(viewLifecycleOwner, {
