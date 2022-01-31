@@ -22,6 +22,3 @@ After all, I need to find a good interpolation for animation. so start reading t
 ## Handle Sound lag issue:
 For every animation like this we need to hear some coin sound when coin earning happened(I know it is not part of the sample, but I want to try it myself). At first, I simply play a sound as soon as one animation ends, but guess what? The performance extremely decreased and scared me. so I'm thinking with myself about how to resolve this issue. I found a good idea to handle this and try it. I start editing the coin sound I've found. I repeat multiple random coin sound in one file and mark the last coin sound time. when the first animation end, I start playing the big sound from a random beginning (to start a new sound sequence), and when the last animation played I seek the sound to the last coin sound and handle the smooth sound experience. Yes, I just handle multiple sounds playing with just one sound playing and it increases the performance compared to the previous state.
 
-
-Best Regards
-Amir
